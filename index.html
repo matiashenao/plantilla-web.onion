@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio Oculto v3 | Nodo Seguro</title>
+    <style>
+        /* CSS Embebido para evitar peticiones HTTP externas */
+        :root {
+            --bg-color: #0d1117;
+            --panel-color: #161b22;
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff;
+            --border-color: #30363d;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: var(--panel-color);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #f0f6fc;
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .status {
+            display: inline-block;
+            background-color: rgba(56, 139, 253, 0.15);
+            color: var(--accent-color);
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .warning-box {
+            background-color: rgba(187, 128, 9, 0.15);
+            border: 1px solid #bb8009;
+            color: #e3b341;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 13px;
+            margin: 20px 0;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #8b949e;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Servicio Oculto Tor v3</h1>
+    <div class="status">SITIO ACTIVO (.ONION)</div>
+    
+    <p>Bienvenido al entorno de pruebas de arquitectura de servicios ocultos. Este sitio ha sido diseñado siguiendo los estándares estrictos de seguridad y optimización para redes descentralizadas.</p>
+    
+    <div class="warning-box">
+        <strong>Directiva de Seguridad (OpSec):</strong> Este sitio no ejecuta scripts de cliente (JavaScript desactivado). Las conexiones externas a CDN de terceros están estrictamente bloqueadas para prevenir fugas de IP (IP Leaks).
+    </div>
+
+    <p>Para auditar la configuración del servidor que aloja este archivo, verifique los parámetros de aislamiento de red y cabeceras de descarte de caché.</p>
+
+    <div class="footer">
+        Generado criptográficamente vía Tor Network Core
+    </div>
+</div>
+
+</body>
+</html>
