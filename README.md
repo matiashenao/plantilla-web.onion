@@ -15,3 +15,35 @@ Si se desea montar este archivo en un entorno Linux local para pruebas de audito
    ```bash
    sudo apt update
    sudo apt install nginx tor -y
+   
+2. **Configurar el Servidor Web (Nginx):**
+Mover el archivo index.html a /var/www/html y configurar Nginx para que solo escuche en la interfaz local (127.0.0.1:80), bloqueando el acceso desde la IP pública del servidor.
+
+3. **Configurar Tor (/etc/tor/torrc):**
+Descomentar o añadir las siguientes líneas para apuntar al servidor local:
+
+Plaintext
+HiddenServiceDir /var/lib/tor/hidden_service/
+HiddenServicePort 80 127.0.0.1:80
+Iniciar Servicios:
+
+   ```bash
+sudo systemctl restart nginx
+sudo systemctl restart tor
+Obtener la dirección .onion:
+   ```
+   ```bash
+sudo cat /var/lib/tor/hidden_service/hostname
+   ```
+---
+
+### Próximo paso para tu Git
+Basta con que crees esos dos archivos dentro de tu carpeta, abras tu terminal y ejecutes los comandos clásicos para subirlo a tu perfil:
+
+```bash
+git init
+git add .
+git commit -m "Estructura inicial de servicio oculto seguro"
+git remote add origin TU_URL_DE_GITHUB
+git branch -M main
+git push -u origin main
